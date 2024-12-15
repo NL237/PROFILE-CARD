@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Profile card component</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+    :root{
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      min-height: 100vh;
+      background-color: var(--Dark-cyan);
+      font-family: 'Kumbh Sans',sans-serif;
+      display: flex;
+    }
+    body>img:nth-child(0){
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    body>img:nth-child(1){
+      z-index: 1;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    #tab{
+      width: 270px;
+      margin: auto;
+      background-image: url(images/bg-pattern-card.svg);
+      background-repeat: no-repeat;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      z-index: 2;
+    }
+    #tab>img{
+      position: absolute;
+      border: 5px solid white;
+      border-radius: 50%;
+      top: 85px;
+    }
+    #tab .infos{
+      margin-top: 200px;
+    }
+    #tab h2{
+      color: var(--Very-dark-desaturated-blue);
+      font-size: 17px;
+      font-weight: 700;
+      text-align: center;
+    }
+    #tab h2 span{
+      color: var(--Dark-grayish-blue);
+      font-weight: 400;
+    }
+    #tab h3{
+      color: var(--Dark-gray);
+      font-size: 14px;
+      font-weight: 400;
+      text-align: center;
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+    #tab .infosup{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      border-top: 1px solid hsla(0, 0%, 59%, 0.329);
+      padding: 15px 0;
+    }
+    #tab .infosup div{
+      text-align: center;
+    }
+    #tab .infosup div h2{
+      color: var(--Very-dark-desaturated-blue);
+    }
+    #tab .infosup div p{
+      color: var(--Dark-grayish-blue);
+      font-size: 11px;
+    }
+
+  </style>
+</head>
+<body>
+  <!--<img src="images/bg-pattern-top.svg" alt="">-->
+  <div id="tab">
+
+    <img src="images/image-victor.jpg" alt="">
+    <div class="infos">
+      <h2>Victor Crest <span>26</span></h2>
+      <h3>London</h3>
+    </div>
+    <div class="infosup">
+      <div class="inf">
+        <h2>80K</h2>
+        <p>Followers</p>
+      </div>
+      <div class="inf">
+        <h2>803K</h2>
+        <p>Likes</p>
+      </div>
+      <div class="inf">
+        <h2>1.4K</h2>
+        <p>Photos</p>
+      </div>
+    </div>
+    
+  </div>
+  <!--<img src="images/bg-pattern-bottom.svg" alt="">-->
+</body>
+</html>
